@@ -114,7 +114,7 @@ pub struct NetworkBuilder {
 
 impl NetworkBuilder {
     /// Set network options.
-    pub fn set_option(self, option: NetworkOption) -> FdbResult<Self> {
+    pub set_option(self, option: NetworkOption) -> FdbResult<Self> {
         unsafe { option.apply()? };
         Ok(self)
     }
